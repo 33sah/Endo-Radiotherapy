@@ -4,7 +4,7 @@ Geant4 Simulation Code for Endo Radiotherapy Testing. This uses alpha particles 
 
 This type of radiotherapy is particularly useful for the cancer Retroperitoneal Sarcoma which is a rare type of cancer that develops in connective tissue, eg. tendons, cartilage, nerves, and fat, specifically in the Retroperitoneum. The purpose of this simulation and study is to evaluate the effectiveness and viability of this new treatment in comparison to traditional proton radiotherapy. 
 
-The simulation code was adapted from the MolecularDNA Geant4-DNA example, with a spherical emission of particles to simulate the radionuclide carriers. 
+The simulation code was adapted from the [MolecularDNA Geant4-DNA example](https://geant4-dna.github.io/molecular-docs/), with a spherical emission of particles to simulate the radionuclide carriers. 
 
 ## Installation
  
