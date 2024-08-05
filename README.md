@@ -21,7 +21,8 @@ Following the build of the project, run the file using the command:
 
 The macro files available are:
 - Cancer1.mac: For the simulation of cancer cell damage
-- Cancer2.mac For the simulation of fat / pancreatic cell damage
+- Cancer2.mac: For the simulation of fat cell damage
+- Cancer3.mac: For the simulation of pancreatic cell damage
 - Vis.mac for the visualisation of the simulations. This can be run with the other macro files by uncommenting the line:
   
       /control/execute {macro_file}
