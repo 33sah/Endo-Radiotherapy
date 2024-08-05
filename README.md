@@ -1,10 +1,10 @@
-# Endo-Radiotherapy
+# Endo-Radiotherapy for Retroperitoneal Sarcoma
 
-Geant4 Simulation Code for Endo Radiotherapy Testing. 
+Geant4 Simulation Code for Endo Radiotherapy Testing. This uses alpha particles accelerated between 5 - 9 MeV instead of in place of proton radiotherapy which is currently mainstream where protons are accelerated to 70 - 250 MeV. The shorter penetration range of alpha particles makes them less suceptible to damaging healthy cells and their much larger mass and charge allows them to ionise and therefore kill cancer cells more easily. 
 
-Adapted from the MolecularDNA Geant4-DNA example, with a spherical emission of particles to simulate the radionuclide carriers. 
+This type of radiotherapy is particularly useful for the cancer Retroperitoneal Sarcoma which is a rare type of cancer that develops in connective tissue, eg. tendons, cartilage, nerves, and fat, specifically in the Retroperitoneum. The purpose of this simulation and study is to evaluate the effectiveness and viability of this new treatment in comparison to traditional proton radiotherapy. 
 
-
+The simulation code was adapted from the MolecularDNA Geant4-DNA example, with a spherical emission of particles to simulate the radionuclide carriers. 
 
 ## Installation
  
