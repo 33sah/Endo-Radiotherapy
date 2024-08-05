@@ -17,7 +17,7 @@ The simulation code was adapted from the MolecularDNA Geant4-DNA example, with a
 
 Following the build of the project, run the file using the command:
 
-    ./cancer.exe -m {macro_file} -t {number_of_threads}- p {physics_list}
+    ./cancer.exe -m {macro_file} -t {number_of_threads} -p {physics_list}
 
 The macro files available are:
 - Cancer1.mac: For the simulation of cancer cell damage
