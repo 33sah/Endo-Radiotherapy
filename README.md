@@ -26,4 +26,8 @@ The macro files available are:
   
     /control/execute {macro_file}
 
+The physics_list parameter is a choice of numbers between 2 and 6 with the main options being G4EmDNAPhysics_option2, G4EmDNAPhysics_option4 or G4EmDNAPhysics_option6
+
+Option 2 is much more widely used and is significantly less taxing on your computer, but option 4 offers higher precision. Option 6 is unlikely to be used given that it uses more experimental features. 
+
 Python File Generate.py is also available in order to run large numbers of the simulation while altering parameters. 
