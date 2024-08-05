@@ -10,7 +10,7 @@ Adapted from the MolecularDNA Geant4-DNA example, with a spherical emission of p
  
 - Download the files from the GitHub
 - Ensure that CMake, Microsoft Visual Studio and Geant4 have been installed, if this is not the case we recommend the following tutorial: [Geant4 Installation](https://youtu.be/GykiM1lPON4?si=QznL75Rlii4i8V60) or the author's other tutorials for your relevant operating system.
-- Build the example using CMake, open project with Visual Studio and build the project.
+- Build the example using CMake, make sure to uncomment the geometry building section if they have not previously been installed and then open project with Visual Studio and build the project.
 - Finally build the installation, ensuring to copy the exectuable to your build folder with the relevant macro files.
 
 ## Usage
