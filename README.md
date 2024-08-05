@@ -20,11 +20,11 @@ Following the build of the project, run the file using the command:
     ./cancer.exe -m {macro_file} -t {number_of_threads}- p {physics_list}
 
 The macro files available are:
-    - Cancer1.mac: For the simulation of cancer cell damage
-    - Cancer2.mac For the simulation of fat / pancreatic cell damage
-    - Vis.mac for the visualisation of the simulations. This can be run with the other macro files by uncommenting the line:
+- Cancer1.mac: For the simulation of cancer cell damage
+- Cancer2.mac For the simulation of fat / pancreatic cell damage
+- Vis.mac for the visualisation of the simulations. This can be run with the other macro files by uncommenting the line:
   
-    /control/execute {macro_file}
+      /control/execute {macro_file}
 
 The physics_list parameter is a choice of numbers between 2 and 6 with the main options being G4EmDNAPhysics_option2, G4EmDNAPhysics_option4 or G4EmDNAPhysics_option6
 
