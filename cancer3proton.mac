@@ -1,4 +1,4 @@
-# This macro file is for testing the cancer cell damage. Due to limitations with the Geant4-DNA module, we are simulating all cells as water.
+# This macro file is for testing the pancreatic cell damage. Due to limitations with the Geant4-DNA module, we are simulating all cells as water.
 
 # Selecting these processes and physics lists (physics list recommended by stanford for medical use)
 /process/dna/e-SolvationSubType Meesungnoen2002
@@ -40,22 +40,15 @@
 /dnadamage/inductionEaqChance 0.00
 
 # Add the dna to the cell 
-/chromosome/add cell ellipse 7005 2500 5300 112061.6 0 0 nm 0 0 0
+/chromosome/add cell ellipse 7005 2500 5300 389111.6 0 0 nm 0 0 0
 
 /run/initialize 
 
-# source conditions, spherical output:
-/gps/particle alpha
-/gps/pos/type Volume
-/gps/pos/shape Sphere
-/gps/pos/centre 0 0 0 um
-/gps/pos/radius 0.1 um
-/gps/ang/type iso
-
-# Gaussian distribution - 3 sigma gives 99.7% of range so divide range by 3. 
-/gps/ene/type Gauss
-/gps/ene/mono 7.1 MeV
-/gps/ene/sigma 0.43333 MeV
+# proton beam source
+/gps/particle proton
+/gps/energy 130 MeV
+/gps/position 0 0 0 um
+/gps/direction 1 0 0
 
 # For visualisation if needed
 #/control/execute vis.mac
@@ -63,4 +56,4 @@
 /run/beamOn 1000
 
 # Create a root analysis file
-/analysisDNA/fileName cancer2_ener.root
+/analysisDNA/fileName cancer3proton.root

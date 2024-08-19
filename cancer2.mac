@@ -60,7 +60,7 @@
 # For visualisation if needed
 #/control/execute vis.mac
 
-/run/beamOn 5
+/run/beamOn 1000
 
 # Create a root analysis file
-/analysisDNA/fileName cancer2.root
+/analysisDNA/fileName cancer2_ener.root
