@@ -1,0 +1,66 @@
+# This macro file is for testing the pancreatic cell damage. Due to limitations with the Geant4-DNA module, we are simulating all cells as water.
+
+# Selecting these processes and physics lists (physics list recommended by stanford for medical use)
+/process/dna/e-SolvationSubType Meesungnoen2002
+#/process/dna/e-SolvationSubType Ritchie1994
+#/process/dna/e-SolvationSubType Terrisol1990
+
+# print macro commands on screen and save run history for all runs
+/control/verbose 2
+/control/saveHistory
+
+# setting up world with cells
+/world/worldSize 1000 um
+/cell/radiusSize 500 500 500 um
+/scheduler/endTime 5.0 ns
+/scheduler/maxNullTimeSteps 10000000
+/dnageom/radicalKillDistance 9 nm
+/dnageom/interactionDirectRange 3.5 angstrom
+
+# DNA Geometry Model 
+/dnageom/definitionFile geometries/cube-centred-X-8.txt
+/dnageom/placementVolume turn geometries/turned_solenoid_750_withHistone.txt
+/dnageom/placementVolume turntwist geometries/turned_twisted_solenoid_750_withHistone.txt true
+/dnageom/placementVolume straight geometries/straight_solenoid_750_withHistone.txt
+
+# DNA Damage Model
+/dnadamage/directDamageLower 5 eV
+/dnadamage/directDamageUpper 37.5 eV
+
+/dnadamage/indirectOHBaseChance 1.0
+/dnadamage/indirectOHStrandChance 0.405
+/dnadamage/inductionOHChance 0.00
+
+/dnadamage/indirectHBaseChance 1.0
+/dnadamage/indirectHStrandChance 0.0
+/dnadamage/inductionHChance 0.00
+
+/dnadamage/indirectEaqBaseChance 1.0
+/dnadamage/indirectEaqStrandChance 0.0
+/dnadamage/inductionEaqChance 0.00
+
+# Add the dna to the cell 
+/chromosome/add cell ellipse 7005 2500 5300 389111.6 0 0 nm 0 0 0
+
+/run/initialize 
+
+# source conditions, spherical output:
+/gps/particle alpha
+/gps/pos/type Volume
+/gps/pos/shape Sphere
+/gps/pos/centre 0 0 0 um
+/gps/pos/radius 0.1 um
+/gps/ang/type iso
+
+# Gaussian distribution - 3 sigma gives 99.7% of range so divide range by 3. 
+/gps/ene/type Gauss
+/gps/ene/mono 7.1 MeV
+/gps/ene/sigma 0.43333 MeV
+
+# For visualisation if needed
+#/control/execute vis.mac
+
+/run/beamOn 5
+
+# Create a root analysis file
+/analysisDNA/fileName cancer3_ener.root
