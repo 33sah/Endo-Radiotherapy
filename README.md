@@ -1,6 +1,6 @@
 # Endo-Radiotherapy for Retroperitoneal Sarcoma
 
-Geant4 Simulation Code for Endo Radiotherapy Testing. This uses alpha particles accelerated between 5 - 9 MeV instead of in place of proton radiotherapy which is currently mainstream where protons are accelerated to 70 - 250 MeV. The shorter penetration range of alpha particles makes them less suceptible to damaging healthy cells and their much larger mass and charge allows them to ionise and therefore kill cancer cells more easily. 
+Geant4 Simulation Code for Endo Radiotherapy Testing. This uses alpha particles from Actinium-255 decay accelerated between 5.8 to 8.4 MeV instead of in place of proton radiotherapy which is currently mainstream where protons are accelerated to 70 - 250 MeV. The shorter penetration range of alpha particles makes them less suceptible to damaging healthy cells and their much larger mass and charge allows them to ionise and therefore kill cancer cells more easily. 
 
 This type of radiotherapy is particularly useful for the cancer Retroperitoneal Sarcoma which is a rare type of cancer that develops in connective tissue, eg. tendons, cartilage, nerves, and fat, specifically in the Retroperitoneum. The purpose of this simulation and study is to evaluate the effectiveness and viability of this new treatment in comparison to traditional proton radiotherapy. 
 
@@ -20,12 +20,14 @@ Following the build of the project, run the file using the command:
     ./cancer.exe -m {macro_file} -t {number_of_threads} -p {physics_list}
 
 The macro files available are:
-- Cancer1.mac: For the simulation of cancer cell damage
-- Cancer2.mac: For the simulation of fat cell damage
-- Cancer3.mac: For the simulation of pancreatic cell damage
-- Vis.mac for the visualisation of the simulations. This can be run with the other macro files by uncommenting the line:
+- cancer1.mac: For the simulation of cancer cell damage
+- cancer2.mac: For the simulation of fat cell damage
+- cancer3.mac: For the simulation of pancreatic cell damage
+- vis.mac for the visualisation of the simulations. This can be run with the other macro files by uncommenting the line:
   
       /control/execute {macro_file}
+
+All cancer files have their proton alternatives named as: cancer{n}proton.mac
 
 The physics_list parameter is a choice of numbers between 2 and 6 with the main options being G4EmDNAPhysics_option2, G4EmDNAPhysics_option4 or G4EmDNAPhysics_option6
 
