@@ -63,4 +63,4 @@
 /run/beamOn 1000
 
 # Create a root analysis file
-/analysisDNA/fileName cancer3_ener.root
+/analysisDNA/fileName cancer3.root
