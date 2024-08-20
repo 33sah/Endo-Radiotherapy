@@ -5,6 +5,8 @@
 #/process/dna/e-SolvationSubType Ritchie1994
 #/process/dna/e-SolvationSubType Terrisol1990
 
+/chem/activate true
+
 # print macro commands on screen and save run history for all runs
 /control/verbose 2
 /control/saveHistory
@@ -53,7 +55,7 @@
 # For visualisation if needed
 #/control/execute vis.mac
 
-/run/beamOn 1000
+/run/beamOn 100
 
 # Create a root analysis file
 /analysisDNA/fileName cancer1proton.root
