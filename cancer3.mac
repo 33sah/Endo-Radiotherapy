@@ -6,7 +6,7 @@
 #/process/dna/e-SolvationSubType Terrisol1990
 
 # print macro commands on screen and save run history for all runs
-/control/verbose 2
+/control/verbose 1
 /control/saveHistory
 
 /chem/activate true
@@ -62,7 +62,4 @@
 # For visualisation if needed
 #/control/execute vis.mac
 
-/run/beamOn 100
-
-# Create a root analysis file
-/analysisDNA/fileName cancer3.root
+/run/beamOn 500

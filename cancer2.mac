@@ -5,11 +5,11 @@
 #/process/dna/e-SolvationSubType Ritchie1994
 #/process/dna/e-SolvationSubType Terrisol1990
 
-/chem/activate true
-
 # print macro commands on screen and save run history for all runs
-/control/verbose 2
+/control/verbose 1
 /control/saveHistory
+
+/chem/activate true
 
 # setting up world with cells
 /world/worldSize 1000 um
@@ -62,7 +62,4 @@
 # For visualisation if needed
 #/control/execute vis.mac
 
-/run/beamOn 100
-
-# Create a root analysis file
-/analysisDNA/fileName cancer2.root
+/run/beamOn 500
