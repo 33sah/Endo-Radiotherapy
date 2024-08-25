@@ -1,7 +1,7 @@
-cancer chromosome: (0.0058 x 2) + 112.05 -->  central nucleus (112.0616, 0, 0) um
+cancer chromosome: (0.0058 x 2) + 40.78 -->  central nucleus (40.7916, 0, 0) um
 
-adipose chromosome: (0.0058 * 2) + (112.05 * 2) + 80 --> central nucleus (304.1116, 0, 0) um
+adipose chromosome: (0.0058 * 2) + (40.78 * 2) + 80 --> central nucleus (161.5716, 0, 0) um
 
-pancreas chromosome: (0.0058 * 2) + (112.05 * 2) + (80 * 2) + 5 --> central nucleus (389.1116, 0, 0) um
+pancreas chromosome: (0.0058 * 2) + (40.78 * 2) + (80 * 2) + 5 --> central nucleus (246.5716, 0, 0) um
 
 source always at: (0,0,0),  origin
