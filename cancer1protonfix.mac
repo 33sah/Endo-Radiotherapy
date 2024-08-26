@@ -5,8 +5,8 @@
 /run/verbose 1
 /control/verbose 1
 
-/world/worldSize 50 um
-/cell/radiusSize 21 2.5 13 um
+/world/worldSize 100 um
+/cell/radiusSize 41 2.5 13 um
 /scheduler/endTime 5.0 ns
 /scheduler/maxNullTimeSteps 10000000
 /dnageom/radicalKillDistance 9 nm
@@ -35,7 +35,7 @@
 /dnadamage/inductionEaqChance 0.00
 
 
-/chromosome/add cell ellipse 7100 2500 7100 20000 0 0 nm 0 0 0
+/chromosome/add cell ellipse 7100 2500 7100 0 0 0 nm 0 0 0
 #/chromosome/add cell sphere 3000 0 0 0 nm
 
 /run/initialize
@@ -45,7 +45,7 @@
 
 /gps/pos/type Plane
 /gps/pos/shape Circle
-/gps/pos/centre 0 -21.916 0 um
+/gps/pos/centre -40.7916 0 0 um
 /gps/pos/rot1 0 0 1
 /gps/pos/rot2 0 1 0
 /gps/pos/radius 7100 nm
@@ -56,4 +56,4 @@
 /gps/energy 130 MeV
 
 
-/run/beamOn 100
+/run/beamOn 500
